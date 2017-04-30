@@ -1,4 +1,3 @@
-
 (function(){
 
 	var prevBtn = document.getElementsByClassName('prevBtn')[0];
@@ -11,14 +10,11 @@
 	});
 	nextBtn.addEventListener('click',	function(){
 
-
-	 	SlideShow.nextSlide();
+		SlideShow.nextSlide();
 
 	});
 
 })();
-
-
 
 	var SlideShow = (function(){
 
@@ -45,8 +41,8 @@
 				direction = newDirection;
 				slideTarget(newDirection);
 
-				bullets[currentSlideIndex].classList.add('bullet--active');
-				bullets[nextSlideIndex].classList.remove('bullet--active');
+				bullets[currentSlideIndex].classList.remove('bullet--active');
+				bullets[nextSlideIndex].classList.add('bullet--active');
 
 				nextSlide.style.left = direction === 'prev' ? '-100%' : '100%';
 				currentSlide.style.left = '0%';
@@ -108,6 +104,7 @@
 			function setContainerSize(){
 
 				var container = document.getElementsByClassName('carousel')[0];
+
 
 			}
 
